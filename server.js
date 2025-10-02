@@ -40,7 +40,7 @@ app.use(session({
 }));
 
 // 기본 라우트
-app.get('/', (req, res) => res.send('Backend server is running!'));
+app.get('/health', (req, res) => res.send('Backend server is running!'));
 
 // 📌 라우트 연결
 app.use('/profile', require('./routes/profile'));
